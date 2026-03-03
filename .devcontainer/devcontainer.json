@@ -1,0 +1,135 @@
+{
+  "name": "base-app-dev-container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dev",
+  "runServices": ["dev", "db"],
+  "workspaceFolder": "/workspace",
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next",
+
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+
+        "astro-build.astro-vscode",
+
+        "editorconfig.editorconfig",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "files.eol": "\n",
+
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.formatOnType": true,
+
+        "[csharp]": {
+          "editor.tabSize": 4,
+          "editor.insertSpaces": true,
+          "editor.defaultFormatter": "ms-dotnettools.csharp",
+          "editor.formatOnSave": true
+        },
+
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[javascriptreact]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[typescript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[typescriptreact]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[astro]": {
+          "editor.defaultFormatter": "astro-build.astro-vscode",
+          "editor.formatOnSave": true
+        },
+
+        "eslint.enable": true,
+        "eslint.run": "onSave",
+        "eslint.alwaysShowStatus": true,
+        "eslint.validate": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact"
+        ],
+
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit",
+          "source.organizeImports": "explicit"
+        },
+
+        "dotnet.server.useOmnisharp": false,
+        "omnisharp.autoStart": false,
+
+        "csharp.format.enable": true,
+        "csharp.semanticHighlighting.enabled": true,
+        "csharp.suppressDotnetInstallWarning": true,
+
+        "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
+        "dotnet.completion.showSuggestionsForNullableTypes": true,
+
+        "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
+        "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
+
+        "csharp.inlayHints.enableInlayHintsForIndexerParameters": true,
+        "csharp.inlayHints.enableInlayHintsForLiteralParameters": true,
+        "csharp.inlayHints.enableInlayHintsForObjectCreationParameters": true,
+        "csharp.inlayHints.enableInlayHintsForOtherParameters": true,
+        "csharp.inlayHints.enableInlayHintsForParameters": true,
+        "csharp.inlayHints.enableInlayHintsForTypes": true,
+        "csharp.inlayHints.enableInlayHintsForImplicitObjectCreation": true,
+        "csharp.inlayHints.enableInlayHintsForImplicitVariableTypes": true,
+        "csharp.inlayHints.enableInlayHintsForLambdaParameterTypes": true,
+
+        "dotnet.codeLens.enableReferencesCodeLens": true,
+        "dotnet.codeLens.enableTestsCodeLens": true,
+
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "typescript.enablePromptUseWorkspaceTsdk": true,
+        "typescript.suggest.autoImports": true,
+        "typescript.updateImportsOnFileMove.enabled": "always",
+        "typescript.inlayHints.enumMemberValues.enabled": true,
+        "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+        "typescript.inlayHints.parameterNames.enabled": "all",
+        "typescript.inlayHints.parameterTypes.enabled": true,
+        "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+        "typescript.inlayHints.variableTypes.enabled": true,
+
+        "javascript.suggest.autoImports": true,
+        "javascript.updateImportsOnFileMove.enabled": "always",
+        "javascript.inlayHints.enumMemberValues.enabled": true,
+        "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+        "javascript.inlayHints.parameterNames.enabled": "all",
+        "javascript.inlayHints.parameterTypes.enabled": true,
+        "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+        "javascript.inlayHints.variableTypes.enabled": true,
+
+        "files.readonlyInclude": {
+          "**/routeTree.gen.ts": true
+        },
+        "files.watcherExclude": {
+          "**/routeTree.gen.ts": true
+        },
+        "search.exclude": {
+          "**/routeTree.gen.ts": true
+        }
+      }
+    }
+  }
+}
